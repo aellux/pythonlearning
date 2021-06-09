@@ -90,4 +90,28 @@ result = cube(4)
 print(result)
 
 #if statements
+is_male = True #if changed to false, it won't print
+is_tall = True #if both conditions are false, print else statement
+if is_male or is_tall: #"and" checks if both condeitions are met
+    print("You are a male")
+elif is_male and not(is_tall): #else if "elif" and ! is not()
+    print("You are a short male")
+elif not(is_male) and is_tall:
+    print("You are tall but not male")
+else:  
+    print("You're neither male nor tall")
+
+#comparison
+def max_num(num1, num2, num3):
+    if num1 >= num2 and num1 >= num3:
+        return num1
+    elif num2 >= num1 and num2 >= num3:
+        return num2
+    else:
+        return num3
+
+print(max_num(3, 4, 5)) #these numbers correspond to num1, 2, and 3. The greatest number out of these 3 numbers are 5, so it prints 5
+#you can also use "==" to see if two variables match
+#can also compare strings and booleans
+
 
