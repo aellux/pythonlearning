@@ -41,3 +41,53 @@ print(age)
 
 #variable values
 #float, int
+
+#creating/using a list
+friends = ["Kevin", "Karen", "Jim", "Jin", "Alex"]
+print(friends[2]) #prints the index of "Jim" which is in the 2nd index
+print(friends[-1]) #prints the index starting from the end, which is Alex
+print(friends[1:3]) #prints the index from 1 onward until the 3rd, can leave 3 empty to print all indexes from 1 onward
+
+friends[1] = "Mike" #Edits the element in the list
+print(friends[1]) 
+
+#list functions
+lucky_numbers = [4,8,4,6,7,8,10]
+friends.extend(lucky_numbers) #adds the list of lucky numbers onto the friends list
+friends.append("Potato") #adds another name at the end of the list
+friends.insert(1, "Kelly") #at index position 1, it adds Kelly into the list, moving the rest of the list to +1 index
+friends.remove("Jim") #removes a specific element in the list
+friends.clear() #function to remove the entire list
+friends.pop() #removes the last element in the list
+print(friends.index("Kevin")) #prints the index of the specific element of the list
+print(friends.count("Jim")) #prints the number of "Jim" elements in the list
+friends.sort() #puts the elements in alphabetical order, in terms of numbers, goes least to greatest
+lucky_numbers.reverse() #reverses the order of the list
+friends2 = friends.copy() #friends2 copies the same elements in friends
+
+#tuples
+coordinates = (5, 6) #permanent elements in the tuple, cannot be changed
+print(coordinates[0]) #prints the first index of the coordinates list
+coordinatesL = [(4, 5), (6, 7), (8, 9)] #you can make a list of tuples
+
+#functions
+def say_hi(name, age):
+    print("Hi there!" + name + ", you are" + age)
+
+say_hi("Mike", "40") #This parameter inside say_hi is getting passed into the definition "name"
+say_hi("Steve", "50") 
+
+def say_bye(name, age):
+    print("Good bye!" + name + ", you are" + str(age))
+
+say_bye("Alex", 20) #you can also pass a straight integer but will have to add str before printing the value
+
+#returning
+def cube(num):
+   return num*num*num #use return when using a function and it will send back the call
+   #print("code") isn't going to work
+result = cube(4)
+print(result)
+
+#if statements
+
